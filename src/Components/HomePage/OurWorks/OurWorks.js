@@ -1,5 +1,7 @@
 import React from 'react';
 import './OurWorks.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 import image1 from '../../../Images/carousel-1.png';
 import image2 from '../../../Images/carousel-2.png';
 import image3 from '../../../Images/carousel-4.png';
@@ -13,25 +15,25 @@ const OurWorks = () => {
             <div className="container py-5">
                 <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                     <div className="carousel-inner">
-                        <div className="carousel-item active" data-interval="2000">
+                        <div className="carousel-item active" data-interval="1500">
                             <img src={image1} className="d-block w-100" alt="" />
                         </div>
-                        <div className="carousel-item" data-interval="2000">
+                        <div className="carousel-item" data-interval="1500">
                             <img src={image2} className="d-block w-100" alt="" />
                         </div>
-                        <div className="carousel-item" data-interval="2000">
+                        <div className="carousel-item" data-interval="1500">
                             <img src={image3} className="d-block w-100" alt="" />
                         </div>
-                        <div className="carousel-item" data-interval="2000">
+                        <div className="carousel-item" data-interval="1500">
                             <img src={image4} className="d-block w-100" alt="" />
                         </div>
                     </div>
                     <div className="text-center">
                         <a href="#carouselExampleControls" role="button" data-slide="prev">
-                            <span className="btn btn-primary mx-3" aria-hidden="true">Previous</span>
+                            <span className="btn btn-primary mx-3" aria-hidden="true"><FontAwesomeIcon icon={faChevronCircleLeft}/></span>
                         </a>
                         <a href="#carouselExampleControls" role="button" data-slide="next">
-                            <span className="btn btn-primary mx-3" aria-hidden="true">Next</span>
+                            <span className="btn btn-primary mx-3" aria-hidden="true"><FontAwesomeIcon icon={faChevronCircleRight}/></span>
                         </a>
                     </div>
                 </div>

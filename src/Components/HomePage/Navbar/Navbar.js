@@ -2,9 +2,12 @@ import React, {useContext, useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import logo from '../../../Images/logo.png';
+import { Button } from 'react-bootstrap';
+import "firebase/auth";
+import * as firebase from "firebase/app";
 
 const Navbar = () => {
-    const [user] = useContext(UserContext);
+    const [user, setUser] = useContext(UserContext);
     const [admin, setAdmin] = useState(false);
 
     // check for admin
@@ -17,6 +20,19 @@ const Navbar = () => {
             })
         }
     }, [user.signed, user.email])
+
+     // signing out
+     function signOutAll(){
+        firebase.auth().signOut()
+        .then(() => setUser({
+                signed: false,
+                name: '',
+                email: '',
+                password: '',
+                message: ''
+        }))
+        .catch(error => console.log(error))   
+    }
 
     return (
         <nav className="navbar navbar-expand-md navbar-light">
@@ -40,9 +56,12 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item mx-2">
                         {
-                            !user.signed &&
-                            <Link to="/login" className="nav-link btn btn-dark text-white px-3">Login</Link>
-                        }  
+                            user.signed ?
+                            <Button onClick={signOutAll} variant="danger" className="mx-2">Logout {user.name}</Button> :
+                            <Link to="/login">
+                                <Button variant="dark" className="mx-2">Login</Button>
+                            </Link>
+                        } 
                         {
                             user.signed && admin &&
                             <Link to="/dashboard/admin" className="nav-link btn btn-dark text-white px-3">Admin Dashboard</Link>
@@ -51,6 +70,7 @@ const Navbar = () => {
                             user.signed && !admin &&
                             <h5 className="nav-link"><b>{user.name}</b></h5>
                         }
+                        
                         </li>
                     </ul>
                 </div>
