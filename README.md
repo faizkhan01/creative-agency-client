@@ -1,5 +1,4 @@
-# Creative Agency Application,
-#### A Digital Agency Web App
+# Creative Agency Application, A Digital Agency Web App
 
 ### [Live Site](https://creative-agency-explore.web.app/)
 
@@ -23,12 +22,12 @@ A full-stack digital agency app where people can hire any tech specialist and or
 
 ### Technologies Used 
 - React.js
-- react-hook-form
+- React-Hook-Form
 - React-Carousel
-- react-router-dom
-- Firebase auth
+- React-Router-Dom
+- Firebase Authentication
 - Firebase hosting
-- custom css
+- Custom Css
 - Bootstrap
 - Node.js
 - Express.js
