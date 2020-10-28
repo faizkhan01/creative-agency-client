@@ -1,4 +1,4 @@
-# Creative Agency Application
+# Creative Agency Application, #### a Digital Agency Web App
 
 ### [Live Site](https://creative-agency-explore.web.app/)
 
@@ -22,13 +22,16 @@ A full-stack digital agency app where people can hire any tech specialist and or
 
 ### Technologies Used 
 - React.js
-- Base64
-- Swiper.js
-- Node.js
-- MongoDB
-- Express.js
-- Bootstrap
+- react-hook-form
+- React-Carousel
+- react-router-dom
 - Firebase auth
-- Heroku
+- Firebase hosting
+- custom css
+- Bootstrap
+- Node.js
+- Express.js
+- MongoDB
+- Heroku deploy
 
 ### [Server Side Repository](https://github.com/faizkhan01/creative-agency-server)
