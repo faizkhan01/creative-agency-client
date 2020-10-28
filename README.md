@@ -1,4 +1,5 @@
-# Creative Agency Application, #### a Digital Agency Web App
+# Creative Agency Application,
+#### A Digital Agency Web App
 
 ### [Live Site](https://creative-agency-explore.web.app/)
 
